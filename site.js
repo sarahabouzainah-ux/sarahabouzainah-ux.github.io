@@ -11,16 +11,16 @@
     for(i=0;i<n;i++){
       a=i*360/n;
       s+= solid
-        ? '<ellipse cx="0" cy="-52" rx="25" ry="44" transform="rotate('+a+')" fill="currentColor" fill-opacity=".95" stroke="'+BG+'" stroke-width="1.8"/>'
+        ? '<ellipse cx="0" cy="-52" rx="25" ry="44" transform="rotate('+a+')" fill="currentColor" fill-opacity=".95" style="stroke:var(--bg)" stroke-width="1.8"/>'
         : '<ellipse cx="0" cy="-52" rx="25" ry="44" transform="rotate('+a+')" fill="currentColor" fill-opacity=".06" stroke="currentColor" stroke-opacity=".85" stroke-width="1.1"/>';
     }
     for(i=0;i<n;i++){
       a=(i+.5)*360/n;
       s+= solid
-        ? '<ellipse cx="0" cy="-30" rx="12" ry="24" transform="rotate('+a+')" fill="'+BG+'" fill-opacity=".3"/>'
+        ? '<ellipse cx="0" cy="-30" rx="12" ry="24" transform="rotate('+a+')" style="fill:var(--bg)" fill-opacity=".3"/>'
         : '<ellipse cx="0" cy="-32" rx="13" ry="25" transform="rotate('+a+')" fill="none" stroke="currentColor" stroke-opacity=".45" stroke-width="1"/>';
     }
-    s+='<circle r="12" fill="'+(solid?BG:'none')+'" stroke="currentColor" stroke-width="1.2" stroke-opacity="'+(solid?0:.8)+'"/><circle r="5.5" fill="currentColor"/></svg>';
+    s+='<circle r="12" '+(solid?'style="fill:var(--bg)"':'fill="none"')+' stroke="currentColor" stroke-width="1.2" stroke-opacity="'+(solid?0:.8)+'"/><circle r="5.5" fill="currentColor"/></svg>';
     return s;
   }
   function burst(n){
@@ -61,6 +61,19 @@
     el.setAttribute('aria-hidden','true');
   }
   [].forEach.call(document.querySelectorAll('[data-shape]'),build);
+
+  /* ---------- theme switch ---------- */
+  var root=document.documentElement, tb=document.querySelector('.theme-btn');
+  function applyTheme(t){
+    root.setAttribute('data-theme',t);
+    var m=document.querySelector('meta[name="theme-color"]'); if(m) m.setAttribute('content',t==='light'?'#FBF6EE':'#0B0908');
+    if(tb) tb.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');
+  }
+  applyTheme(root.getAttribute('data-theme')==='light'?'light':'dark');
+  if(tb) tb.addEventListener('click',function(){
+    var t=root.getAttribute('data-theme')==='light'?'dark':'light';
+    applyTheme(t); try{localStorage.setItem('theme',t);}catch(e){}
+  });
 
   /* ---------- nav state ---------- */
   var nav=document.querySelector('.nav');
