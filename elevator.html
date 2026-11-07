@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0908">
+<meta name="description" content="Speculative UX research on how a control interface for a 10,000-floor elevator would work.">
+<title>10,000-Floor Elevator | Sarah Abouzainah</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VXHC5RNFQE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VXHC5RNFQE');
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A0600'/%3E%3Cellipse cx='20' cy='22' rx='10' ry='9' fill='%23C41230' opacity='.9'/%3E%3Cellipse cx='44' cy='18' rx='7' ry='12' rx='7' fill='%23C8920A' opacity='.85'/%3E%3Ccircle cx='48' cy='44' r='8' fill='%233D5A41' opacity='.9'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='22' font-weight='900' fill='%23FFFDF8' text-anchor='middle' letter-spacing='-1'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="read-bar"><i></i></div>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Sarah Abouzainah, home"><span class="shape" data-shape="flower" data-n="8" data-style="solid"></span><span class="bw"><span class="nm">Sarah Abouzainah</span><span class="bt">Product Design Leader</span></span></a>
+  <ul>
+    <li><a href="work.html" class="on" aria-current="page">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</header>
+<main>
+<div id="cs-elevator" style="background:var(--bg)">
+    <div class="cs-hero">
+    <div class="cs-dot">◈ Speculative · UX Research · 2019</div>
+    <h1>10,000-Floor <em>Elevator</em></h1>
+    <p class="cs-hero-sub">A speculative UX research study exploring how a control interface for a 10,000-floor elevator would work — questioning assumptions around numbering, navigation, wayfinding, and cognitive load at extreme scale.</p>
+    <div class="cs-tags"><span class="cs-tag">Speculative Design</span><span class="cs-tag">UX Research</span><span class="cs-tag">Interaction Design</span><span class="cs-tag">Information Architecture</span><span class="cs-tag">Cognitive Load</span></div>
+  </div>
+  <div class="cs-meta">
+    <div class="cs-mi"><div class="cs-ml">Designer</div><div class="cs-mv">Sarah Abouzainah</div></div>
+    <div class="cs-mi"><div class="cs-ml">Type</div><div class="cs-mv">Personal Research Project</div></div>
+    <div class="cs-mi"><div class="cs-ml">Year</div><div class="cs-mv">2019</div></div>
+    <div class="cs-mi"><div class="cs-ml">Domain</div><div class="cs-mv">Speculative UX · Interaction Design</div></div>
+    <div class="cs-mi"><div class="cs-ml">Method</div><div class="cs-mv">Heuristic Evaluation · IA Mapping</div></div>
+  </div>
+  <div class="cs-cover-wrap"><img class="cs-cover" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/9a23e197389353.5ec9d8a18bee5.jpg" alt="10,000-Floor Elevator — project cover"></div>
+  <div class="cs-body"><aside class="cs-toc" aria-label="In this case study"><div class="toc-h">In this case study <b class="toc-pct">0%</b></div><div class="toc-bar"><i></i></div><ol><li><a href="#s1"><span>01</span>Problem Space</a></li><li><a href="#s2"><span>02</span>Research</a></li><li><a href="#s3"><span>03</span>Design Process</a></li><li><a href="#s4"><span>04</span>Key Designs</a></li><li><a href="#s5"><span>05</span>Design Decisions</a></li><li><a href="#s6"><span>06</span>Outcomes</a></li><li><a href="#s7"><span>07</span>Learnings</a></li></ol></aside><div class="cs-main">
+    <div class="cs-sec" id="s1">
+      <div class="cs-sn">01 — Problem Space</div>
+      <h2>What happens when scale breaks convention?</h2>
+      <p>Standard elevator UI is designed for a few dozen floors. But what if you had 10,000? This project explores the point at which familiar patterns collapse — and what a truly rethought control interface would need to do differently.</p>
+      <div class="cs-pain">
+        <div class="cs-pain-item"><h4>🔢 Numbers become meaningless</h4><p>Scrolling through 10,000 floor buttons is unusable. The conventional floor-number model breaks down entirely.</p></div>
+        <div class="cs-pain-item"><h4>🧠 Cognitive overload by default</h4><p>Without zoning, categorisation, or search, users face a decision space that exceeds human working memory by orders of magnitude.</p></div>
+        <div class="cs-pain-item"><h4>🗺️ Wayfinding has no reference points</h4><p>Floors need a new type of identity — not just numbers, but zones, landmarks, and contextual anchors users can reason about.</p></div>
+      </div>
+      <div class="cs-hmw"><p>"How might we design an elevator control interface that allows a person to navigate 10,000 floors quickly, confidently, and without cognitive overload?"</p></div>
+    </div>
+    <div class="cs-sec" id="s2">
+      <div class="cs-sn">02 — Research</div>
+      <h2>Studying how people orient in large spaces</h2>
+      <p>The research drew on analogies from large-scale wayfinding systems — airports, metro networks, hospital campuses — mapping the heuristics that make them navigable despite their scale.</p>
+      <div class="cs-stats">
+        <div class="cs-stat"><span class="cs-stat-n">10K</span><div class="cs-stat-l">Floors to navigate</div></div>
+        <div class="cs-stat"><span class="cs-stat-n">7±2</span><div class="cs-stat-l">Miller's Law — items in working memory</div></div>
+        <div class="cs-stat"><span class="cs-stat-n">3</span><div class="cs-stat-l">Wayfinding analogies studied</div></div>
+        <div class="cs-stat"><span class="cs-stat-n">4</span><div class="cs-stat-l">Alternative interface concepts</div></div>
+      </div>
+      <div class="cs-insight">
+        <div class="cs-insight-item"><span class="cs-icon">🛫</span><h4>Zones before numbers</h4><p>Airports navigate by terminal → concourse → gate. A 10,000-floor building needs the same zone hierarchy to make navigation tractable.</p></div>
+        <div class="cs-insight-item"><span class="cs-icon">🔍</span><h4>Search over scroll</h4><p>Users need to describe their destination, not locate it in a list. A search model transfers naturally to extreme-scale navigation.</p></div>
+        <div class="cs-insight-item"><span class="cs-icon">⭐</span><h4>Recents &amp; favourites are essential</h4><p>The vast majority of elevator journeys are repeat trips. Surfacing recent destinations eliminates the full navigation problem for most users.</p></div>
+      </div>
+    </div>
+    <div class="cs-sec" id="s3">
+      <div class="cs-sn">03 — Design Process</div>
+      <h2>From analogy to interface</h2>
+      <div class="cs-process">
+        <div class="cs-step"><span class="cs-step-icon">📖</span><div class="cs-step-t">Research</div><div class="cs-step-s">Wayfinding literature &amp; cognitive load theory</div></div>
+        <div class="cs-step"><span class="cs-step-icon">🗺️</span><div class="cs-step-t">IA Mapping</div><div class="cs-step-s">Zone hierarchy &amp; navigation decision tree</div></div>
+        <div class="cs-step"><span class="cs-step-icon">✏️</span><div class="cs-step-t">Ideation</div><div class="cs-step-s">4 interface concepts sketched</div></div>
+        <div class="cs-step"><span class="cs-step-icon">🖥️</span><div class="cs-step-t">Design</div><div class="cs-step-s">Hi-fi hybrid search interface</div></div>
+        <div class="cs-step"><span class="cs-step-icon">✅</span><div class="cs-step-t">Validate</div><div class="cs-step-s">Heuristic evaluation vs Nielsen's 10</div></div>
+      </div>
+    </div>
+    <div class="cs-sec" id="s4">
+      <div class="cs-sn">04 — Key Designs</div>
+      <h2>Rethinking the panel entirely</h2>
+      <div class="cs-flow-lbl">Design Exploration — Zone-based navigation &amp; search interface</div>
+      <div class="cs-img-row">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/9a23e197389353.5ec9d8a18bee5.jpg" alt="Zone-based navigation concept">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/de47ef97389353.5ec9d8a18c62e.jpg" alt="Search interface design">
+      </div>
+      <div class="cs-img-row">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/17fc8497389353.5ec9d8a18d294.jpg" alt="Recents panel and zone selector">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_632_webp/09d1d897389353.5ec9d8a18dfba.jpg" alt="Final hybrid interface">
+      </div>
+      <p class="cs-caption">Zone selector + search bar + recents panel — reducing 10,000 choices to a 3-step interaction: pick zone, refine, confirm floor.</p>
+    </div>
+    <div class="cs-sec" id="s5">
+      <div class="cs-sn">05 — Design Decisions</div>
+      <h2>Key choices</h2>
+      <div class="cs-decision">
+        <div class="cs-before"><div class="cs-dlbl">Convention</div><h4>One button per floor</h4><p>At 10,000 floors, physically impossible to render and cognitively impossible to use. The model collapses entirely at this scale.</p></div>
+        <div class="cs-after"><div class="cs-dlbl">Solution</div><h4>Zone hierarchy + search</h4><p>Navigate via zones or type/speak destination. Most users never leave the Recents panel — the hard problem solves itself.</p></div>
+      </div>
+      <div class="cs-decision">
+        <div class="cs-before"><div class="cs-dlbl">Convention</div><h4>Floor numbers as identity</h4><p>Number 7,431 has no meaning — users cannot orient themselves. Numbers confirm location, they don't communicate it.</p></div>
+        <div class="cs-after"><div class="cs-dlbl">Solution</div><h4>Named zones as primary navigation</h4><p>Each zone carries a name (district, function, landmark) as a meaningful anchor. Numbers confirm, not navigate.</p></div>
+      </div>
+    </div>
+    <div class="cs-sec" id="s6">
+      <div class="cs-sn">06 — Outcomes</div>
+      <h2>What the study demonstrated</h2>
+      <div class="cs-outcomes">
+        <div class="cs-outcome"><span class="cs-outcome-n">4</span><div class="cs-outcome-t">Concepts explored</div><div class="cs-outcome-s">Numeric, zone-based, voice, hybrid</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">3</span><div class="cs-outcome-t">Max navigation steps</div><div class="cs-outcome-s">Zone → Sub-zone → Floor</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">80%</span><div class="cs-outcome-t">Journeys via Recents</div><div class="cs-outcome-s">Most trips are repeat destinations</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">0</span><div class="cs-outcome-t">Buttons per floor</div><div class="cs-outcome-s">Convention abandoned entirely</div></div>
+      </div>
+    </div>
+    <div class="cs-sec" id="s7">
+      <div class="cs-sn">07 — Learnings</div>
+      <h2>What this taught me</h2>
+      <div class="cs-learning"><div class="cs-ln">01</div><div class="cs-lb"><h4>Extreme constraints unlock first-principles thinking</h4><p>Designing for 10,000 floors forces you to question every assumption. Convention becomes useless — which is where the most interesting design thinking happens.</p></div></div>
+      <div class="cs-learning"><div class="cs-ln">02</div><div class="cs-lb"><h4>Wayfinding analogies are a powerful research tool</h4><p>When no precedent exists in your domain, look sideways. Airports and metro systems have solved large-scale navigation — their patterns translate more directly than expected.</p></div></div>
+      <div class="cs-learning"><div class="cs-ln">03</div><div class="cs-lb"><h4>Most users only need a fraction of the interface</h4><p>Designing for 10,000 destinations sounds overwhelming. But 80% of journeys are repeat trips. Designing Recents well solves the real-world problem for the majority.</p></div></div>
+    </div>
+  </div></div>
+  <section class="cs-more"><div class="label">More case studies</div>
+    <div class="mgrid">
+      <a class="mcard" href="bus-tracker.html" style="--accent:var(--red)"><div class="cover"><span class="shape" data-shape="waves"></span></div><div><small>03 · Mobile</small><h3>Bus Tracker Mobile App</h3><p>End-to-end mobile UX research and design for a real-time public transit tracker.</p><span class="textlink">View project →</span></div></a>
+      <a class="mcard" href="gisacc.html" style="--accent:var(--tx)"><div class="cover"><span class="shape" data-shape="burst" data-n="36"></span></div><div><small>04 · Design systems</small><h3>GISACC Design System</h3><p>An enterprise design system built end to end: components, tokens, theming and accessibility.</p><span class="textlink">View project →</span></div></a>
+    </div>
+    <a class="textlink" href="work.html">&larr; All work</a>
+  </section>
+  <div class="cs-footer">
+    <p>© 2019 · 10,000-Floor Elevator · UX Research Study · Sarah Abouzainah</p>
+    <a href="https://www.behance.net/gallery/97389353/User-Research-Design-Study-for-10000-Floor-Elevator" target="_blank" class="cs-behance">View full project on Behance ↗</a>
+  </div>
+</div>
+</main>
+<script src="site.js"></script>
+</body>
+</html>

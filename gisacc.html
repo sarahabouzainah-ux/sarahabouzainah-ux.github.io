@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0908">
+<meta name="description" content="How Valeo&rsquo;s GISACC enterprise design system was built and scaled: components, tokens, theming and accessibility.">
+<title>GISACC Design System | Sarah Abouzainah</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VXHC5RNFQE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VXHC5RNFQE');
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A0600'/%3E%3Cellipse cx='20' cy='22' rx='10' ry='9' fill='%23C41230' opacity='.9'/%3E%3Cellipse cx='44' cy='18' rx='7' ry='12' rx='7' fill='%23C8920A' opacity='.85'/%3E%3Ccircle cx='48' cy='44' r='8' fill='%233D5A41' opacity='.9'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='22' font-weight='900' fill='%23FFFDF8' text-anchor='middle' letter-spacing='-1'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="read-bar"><i></i></div>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Sarah Abouzainah, home"><span class="shape" data-shape="flower" data-n="8" data-style="solid"></span><span class="bw"><span class="nm">Sarah Abouzainah</span><span class="bt">Product Design Leader</span></span></a>
+  <ul>
+    <li><a href="work.html" class="on" aria-current="page">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</header>
+<main>
+<div id="cs-gisacc" style="background:var(--bg)">
+  
+  <!-- Hero -->
+  <div class="cs-hero" style="background:#050403;position:relative;overflow:hidden;padding:9rem var(--pad) 4rem">
+    <div style="position:absolute;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(196,18,48,.28),transparent 70%);filter:blur(70px);top:-80px;right:-60px;pointer-events:none"></div>
+    <div style="position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,84,104,.18),transparent 70%);filter:blur(60px);bottom:-60px;left:20%;pointer-events:none"></div>
+    <div style="position:relative;z-index:1;max-width:820px">
+      <div class="cs-dot">🔒 NDA · Design System · Valeo · 2021–2026</div>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(3rem,7vw,7rem);font-weight:900;color:#fff;line-height:.88;letter-spacing:-.04em;margin-bottom:1.5rem">GISACC<br><em style="font-style:italic;color:rgba(255,84,104,.9)">Design System</em></h1>
+      <p style="font-size:.95rem;color:rgba(255,253,248,.42);line-height:1.85;max-width:620px;font-weight:300">Building Valeo's first enterprise design system from the ground up — from a blank canvas and a brand guideline PDF, to 100+ components, 1,000+ tokens, and a shared foundation across 8 products, 7 teams, and ~40 frontend developers.</p>
+      <div class="cs-tags" style="margin-top:1.75rem">
+        <span class="cs-tag">Design Systems</span><span class="cs-tag">Design Tokens</span><span class="cs-tag">WCAG Accessibility</span><span class="cs-tag">SCSS / Angular</span><span class="cs-tag">PrimeNG</span><span class="cs-tag">Figma</span><span class="cs-tag">DesignOps</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="cs-meta">
+    <div class="cs-mi"><div class="cs-ml">My Role</div><div class="cs-mv">Chief UX/UI Designer & Chapter Lead</div></div>
+    <div class="cs-mi"><div class="cs-ml">Company</div><div class="cs-mv">Valeo — Automotive R&D</div></div>
+    <div class="cs-mi"><div class="cs-ml">Timeline</div><div class="cs-mv">2021 – 2026</div></div>
+    <div class="cs-mi"><div class="cs-ml">Team</div><div class="cs-mv">5 Designers · ~40 Frontend Devs</div></div>
+    <div class="cs-mi"><div class="cs-ml">Status</div><div class="cs-mv">NDA · Visuals on request</div></div>
+  </div>
+
+  <!-- Stats -->
+  <div style="background:#050403;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background-color:rgba(255,253,248,.06)">
+    <div style="background:#050403;padding:2rem;text-align:center;border-right:1px solid rgba(255,253,248,.06)"><span style="font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:900;color:var(--cr);display:block;line-height:1;margin-bottom:.35rem">100+</span><span style="font-size:.72rem;color:rgba(255,253,248,.35)">Components across 3 major releases</span></div>
+    <div style="background:#050403;padding:2rem;text-align:center;border-right:1px solid rgba(255,253,248,.06)"><span style="font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:900;color:var(--cg);display:block;line-height:1;margin-bottom:.35rem">1K+</span><span style="font-size:.72rem;color:rgba(255,253,248,.35)">Design tokens adopted across 8 products</span></div>
+    <div style="background:#050403;padding:2rem;text-align:center;border-right:1px solid rgba(255,253,248,.06)"><span style="font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:900;color:var(--cs);display:block;line-height:1;margin-bottom:.35rem">7</span><span style="font-size:.72rem;color:rgba(255,253,248,.35)">Teams unified under one design language</span></div>
+    <div style="background:#050403;padding:2rem;text-align:center"><span style="font-family:'Playfair Display',serif;font-size:3.2rem;font-weight:900;color:var(--cr);display:block;line-height:1;margin-bottom:.35rem">~40</span><span style="font-size:.72rem;color:rgba(255,253,248,.35)">Frontend developers using the library</span></div>
+  </div>
+
+  <div class="cs-body"><aside class="cs-toc" aria-label="In this case study"><div class="toc-h">In this case study <b class="toc-pct">0%</b></div><div class="toc-bar"><i></i></div><ol><li><a href="#s1"><span>01</span>The Problem</a></li><li><a href="#s2"><span>02</span>Understanding the Users & Context</a></li><li><a href="#s3"><span>03</span>Building the Foundation</a></li><li><a href="#s4"><span>04</span>Building the Component Library</a></li><li><a href="#s5"><span>05</span>Three Releases, One System</a></li><li><a href="#s6"><span>06</span>Key Decisions</a></li><li><a href="#s7"><span>07</span>Outcomes</a></li><li><a href="#s8"><span>08</span>What I'd Do Differently</a></li></ol></aside><div class="cs-main">
+
+    <!-- 01 Problem -->
+    <div class="cs-sec" id="s1">
+      <div class="cs-sn">01 — The Problem</div>
+      <h2>No system. No source of truth. Just a PDF.</h2>
+      <p>When I joined Valeo in 2021, there was no design system, no shared component library, and no defined visual language for digital products. Designers worked independently across projects, each making their own decisions about spacing, color, and component structure. The only starting point was a brand guidelines PDF.</p>
+      <p>My first project had to be built without a system. I defined a color combination I believed was right for the product, applied it to real screens, and tested it in context — checking visibility, contrast, and clarity under actual working conditions. Those colors survived the test and became the formal primary and secondary palette, already aligned with what the brand guidelines had defined.</p>
+      <div class="cs-hmw"><p>"Instead of defining a system in isolation, I validated it through real product work first. The first project became the first test case for the design system before the design system existed."</p></div>
+    </div>
+
+    <!-- 02 User Context -->
+    <div class="cs-sec" id="s2">
+      <div class="cs-sn">02 — Understanding the Users & Context</div>
+      <h2>Before deciding how components look, understand who uses them.</h2>
+      <p>The tools we were designing for are used by engineers and project managers dealing with complex, data-dense workflows. Through observation and early project experience, I collected findings that shaped every visual and structural decision in the system.</p>
+      <div class="cs-findings">
+        <div class="cs-finding">
+          <span class="cs-finding-icon">🗜️</span>
+          <div class="cs-finding-title">Space is critical</div>
+          <div class="cs-finding-desc">Users needed to see a lot of information on one screen without scrolling. Every padding value, every component height had to earn its space — compact but not cramped.</div>
+        </div>
+        <div class="cs-finding g">
+          <span class="cs-finding-icon">👁️</span>
+          <div class="cs-finding-title">Color blindness is real</div>
+          <div class="cs-finding-desc">We discovered a significant proportion of users had color vision deficiencies. WCAG compliance became non-negotiable and shaped how we communicated state — never through color alone.</div>
+        </div>
+        <div class="cs-finding s">
+          <span class="cs-finding-icon">📊</span>
+          <div class="cs-finding-title">Data density, not decoration</div>
+          <div class="cs-finding-desc">The tools carry tables, forms, dashboards, and risk matrices. The style needed to be formal and functional — precise, clear typographic hierarchy, no visual noise competing with data.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Foundation -->
+    <div class="cs-sec" id="s3">
+      <div class="cs-sn">03 — Building the Foundation</div>
+      <h2>Get the foundation wrong and everything built on it will be wrong.</h2>
+      <p>The most critical stage wasn't building components — it was defining the primitives everything else would inherit from. A mistake here would cascade across every component in every product.</p>
+      <div class="cs-steps">
+        <div class="cs-step">
+          <div class="cs-step-dot r">1</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Framework alignment — PrimeNG</div>
+            <div class="cs-step-desc">An early agreement with the frontend team to use <strong>PrimeNG</strong> gave the system its first structural anchor. It defined which icon set to adopt and gave me a clear map of which components needed designing. This kept design and development tightly aligned from day one.</div>
+          </div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-dot g">2</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Color system — shades, states, and accessibility</div>
+            <div class="cs-step-desc">Starting from the validated primary and secondary colors, I built complete shade scales following the <strong>color-50 through color-900</strong> convention. These were defined as design tokens in Figma and simultaneously fed into the SCSS files on the dev side — both progressing in parallel. State colors (error, success, info, warning) were defined alongside and tested across color blindness simulation tools for all major deficiency types.</div>
+          </div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-dot s">3</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Spacing, typography, and border radius</div>
+            <div class="cs-step-desc">Spacing was not defined in isolation. The <strong>input, dropdown, and button components</strong> all needed to align on the same row height — so I designed those components first, defined the element dimensions for readability, then derived the spacing values that made them coherent. Style choices landed on compact, formal, and precise.</div>
+          </div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-dot r">4</div>
+          <div class="cs-step-body">
+            <div class="cs-step-title">Parallel SCSS authoring</div>
+            <div class="cs-step-desc">I wrote the cascade styles in parallel with the Figma design system. When making design decisions, I was simultaneously thinking about how they'd be expressed in code. <strong>Class names in Figma matched the SCSS</strong> — a token update could flow directly to the running product by editing one file.</div>
+          </div>
+        </div>
+      </div>
+      <div class="cs-img-ph h300"><span class="cs-img-ph-icon">🎨</span><span>Foundation — Color scales, spacing tokens, typography system</span></div>
+      <p class="cs-caption">Color shade scales (50–900), state colors, spacing scale, and typography hierarchy — the primitives everything else inherits from.</p>
+    </div>
+
+    <!-- 04 Components -->
+    <div class="cs-sec" id="s4">
+      <div class="cs-sn">04 — Building the Component Library</div>
+      <h2>Components built with constraints in mind, not after the fact.</h2>
+      <p>With the foundation locked, component work started with the most frequently used elements — form inputs, buttons, dropdowns, and data tables. PrimeNG gave a baseline; the job was styling them to the system's tokens and documenting every state, variant, and usage rule in Figma.</p>
+      <div class="cs-img-row">
+        <div class="cs-img-ph h220"><span class="cs-img-ph-icon">🧩</span><span>Core components — Inputs, buttons, dropdowns</span></div>
+        <div class="cs-img-ph h220"><span class="cs-img-ph-icon">📋</span><span>Data components — Tables, filters, pagination</span></div>
+      </div>
+      <p class="cs-caption">Core interaction and data-heavy components were prioritised first as they appear in every tool.</p>
+      <p>The handoff worked through matched class naming between Figma and SCSS. When a component style updated, the corresponding SCSS class carried that change to the running product. The main friction: live products couldn't always absorb updates immediately. This mismatch was flagged to the business as a known risk and managed through release planning.</p>
+    </div>
+
+    <!-- 05 Releases -->
+    <div class="cs-sec" id="s5">
+      <div class="cs-sn">05 — Three Releases, One System</div>
+      <h2>Planned in milestones. Adopted across teams.</h2>
+      <p>With 8 products already in progress when the system launched, I planned the rollout in three milestone releases — each timed to add value without disrupting live delivery.</p>
+      <div class="cs-releases">
+        <div class="cs-release r1">
+          <div class="cs-release-n">01</div>
+          <span class="cs-release-badge">Release 1 — Foundation</span>
+          <div class="cs-release-title">Core primitives and most-used components</div>
+          <div class="cs-release-list">
+            <div class="cs-release-item">Color system & shade scales</div>
+            <div class="cs-release-item">Spacing & typography tokens</div>
+            <div class="cs-release-item">State colors (error, success, info, warning)</div>
+            <div class="cs-release-item">Core components: inputs, buttons, dropdowns, tables</div>
+            <div class="cs-release-item">Icon library (aligned with PrimeNG)</div>
+          </div>
+        </div>
+        <div class="cs-release r2">
+          <div class="cs-release-n">02</div>
+          <span class="cs-release-badge">Release 2 — Full library</span>
+          <div class="cs-release-title">Remaining PrimeNG components</div>
+          <div class="cs-release-list">
+            <div class="cs-release-item">Full PrimeNG component coverage</div>
+            <div class="cs-release-item">Navigation patterns</div>
+            <div class="cs-release-item">Complex data components</div>
+            <div class="cs-release-item">Modal, overlay, and feedback patterns</div>
+            <div class="cs-release-item">Pattern documentation and usage rules</div>
+          </div>
+        </div>
+        <div class="cs-release r3">
+          <div class="cs-release-n">03</div>
+          <span class="cs-release-badge">Release 3 — Brand refresh</span>
+          <div class="cs-release-title">Integration of new Valeo brand identity</div>
+          <div class="cs-release-list">
+            <div class="cs-release-item">Updated brand color palette</div>
+            <div class="cs-release-item">New typography guidelines applied</div>
+            <div class="cs-release-item">Token-first update — minimal component rework</div>
+            <div class="cs-release-item">Synced SCSS deployed across all products</div>
+          </div>
+        </div>
+      </div>
+      <p>Adoption was driven by team alignment, not mandate. All 5 designers agreed on the system as the shared source of truth and each aligned with their dev teams. When Valeo's brand changed in Release 3, the token architecture absorbed it cleanly — most changes were token value updates, not component rebuilds.</p>
+    </div>
+
+    <!-- 06 Key Decisions -->
+    <div class="cs-sec" id="s6">
+      <div class="cs-sn">06 — Key Decisions</div>
+      <h2>The choices that shaped the system.</h2>
+      <div class="cs-decisions">
+        <div class="cs-decision">
+          <div class="cs-decision-label">Framework</div>
+          <div class="cs-decision-title">Anchor to PrimeNG early</div>
+          <div class="cs-decision-desc">Aligning with the frontend team's chosen framework before building anything gave the system a clear component scope and a shared vocabulary from day one. It prevented designing components that couldn't be implemented as intended.</div>
+        </div>
+        <div class="cs-decision">
+          <div class="cs-decision-label">Process</div>
+          <div class="cs-decision-title">Validate through real projects, not a workshop</div>
+          <div class="cs-decision-desc">The color system was tested on a live project before being formalised. This grounded every early decision in actual user-facing context rather than abstract design principles.</div>
+        </div>
+        <div class="cs-decision">
+          <div class="cs-decision-label">Accessibility</div>
+          <div class="cs-decision-title">WCAG from the start, not as a retrofit</div>
+          <div class="cs-decision-desc">Knowing that our user base included color-blind users, accessibility was built into the foundation — contrast ratios, color blindness simulation, and non-color-dependent state communication — before any components were designed.</div>
+        </div>
+        <div class="cs-decision">
+          <div class="cs-decision-label">Engineering</div>
+          <div class="cs-decision-title">Write the SCSS alongside the Figma</div>
+          <div class="cs-decision-desc">Authoring cascade styles in parallel with the design system kept both in sync and gave design decisions a code-reality check. Class name alignment between Figma and SCSS meant updates propagated cleanly to running products.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 Outcomes -->
+    <div class="cs-sec" id="s7">
+      <div class="cs-sn">07 — Outcomes</div>
+      <h2>What the system made possible.</h2>
+      <div class="cs-outcomes">
+        <div class="cs-outcome"><span class="cs-outcome-n">100+</span><div class="cs-outcome-t">Components</div><div class="cs-outcome-s">Across 3 major releases</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">1K+</span><div class="cs-outcome-t">Design tokens</div><div class="cs-outcome-s">Across 8 products & 7 teams</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">~40</span><div class="cs-outcome-t">Frontend devs</div><div class="cs-outcome-s">Using the shared component library</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">3</span><div class="cs-outcome-t">Major releases</div><div class="cs-outcome-s">Including a full brand identity refresh</div></div>
+      </div>
+    </div>
+
+    <!-- 08 Learnings -->
+    <div class="cs-sec" id="s8">
+      <div class="cs-sn">08 — What I'd Do Differently</div>
+      <h2>Reflections from building it.</h2>
+      <div class="cs-learning"><div class="cs-ln">01</div><div class="cs-lb"><h4>Invest more in semantic variables from the start</h4><p>I'd spend more time investigating semantic variable architecture before building the first components. Some early color and spacing decisions had to be revisited when later components revealed dependencies we hadn't anticipated. The token structure made updates manageable, but deeper semantic planning upfront would have reduced the rework.</p></div></div>
+      <div class="cs-learning"><div class="cs-ln">02</div><div class="cs-lb"><h4>Tokens make change survivable</h4><p>The decision to build on design tokens paid off most clearly when Valeo's brand identity changed. What could have been a full system rebuild became largely a token value update — design and code updated together. This is the real value of a token-first system: resilience to change.</p></div></div>
+      <div class="cs-learning"><div class="cs-ln">03</div><div class="cs-lb"><h4>Real constraints make better systems than ideal ones</h4><p>The space constraints, the color blindness discovery, the PrimeNG framework — none of these were ideal conditions. But designing within them produced a system that actually fit the users and teams using it.</p></div></div>
+    </div>
+
+  </div></div>
+  <section class="cs-more"><div class="label">More case studies</div>
+    <div class="mgrid">
+      <a class="mcard" href="appraisal.html" style="--accent:var(--gold)"><div class="cover"><span class="shape" data-shape="flower" data-n="8" data-style="solid"></span></div><div><small>01 · Enterprise HR</small><h3>Valeo Appraisal Process</h3><p>A role-based digital appraisal system for HR, leaders and managers, replacing paper and email.</p><span class="textlink">View project →</span></div></a>
+      <a class="mcard" href="elevator.html" style="--accent:var(--sage)"><div class="cover"><span class="shape" data-shape="rings"></span></div><div><small>02 · Speculative UX</small><h3>10,000-Floor Elevator</h3><p>Speculative UX research on rethinking navigation when convention collapses at extreme scale.</p><span class="textlink">View project →</span></div></a>
+    </div>
+    <a class="textlink" href="work.html">&larr; All work</a>
+  </section>
+  <div class="cs-footer" style="background:#050403;padding:2.5rem 5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(255,253,248,.06)">
+    <p style="font-size:.7rem;color:rgba(255,253,248,.22);letter-spacing:.04em">© 2026 · GISACC Design System · Sarah Abouzainah · Visual assets available under NDA on request</p>
+    <a href="mailto:sarah.abouzaina@gmail.com" style="display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,253,248,.07);border:1px solid rgba(255,253,248,.14);color:rgba(255,253,248,.65);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:.6rem 1.4rem;border-radius:100px;text-decoration:none">Request visuals ↗</a>
+  </div>
+</div><!-- end #cs-gisacc -->
+</main>
+<script src="site.js"></script>
+</body>
+</html>

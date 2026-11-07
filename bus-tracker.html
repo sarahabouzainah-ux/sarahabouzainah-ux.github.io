@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0908">
+<meta name="description" content="End-to-end UX research and design for a real-time public transit bus tracking mobile app.">
+<title>Bus Tracker Mobile App | Sarah Abouzainah</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VXHC5RNFQE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-VXHC5RNFQE');
+</script>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A0600'/%3E%3Cellipse cx='20' cy='22' rx='10' ry='9' fill='%23C41230' opacity='.9'/%3E%3Cellipse cx='44' cy='18' rx='7' ry='12' rx='7' fill='%23C8920A' opacity='.85'/%3E%3Ccircle cx='48' cy='44' r='8' fill='%233D5A41' opacity='.9'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='22' font-weight='900' fill='%23FFFDF8' text-anchor='middle' letter-spacing='-1'%3ESA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="read-bar"><i></i></div>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Sarah Abouzainah, home"><span class="shape" data-shape="flower" data-n="8" data-style="solid"></span><span class="bw"><span class="nm">Sarah Abouzainah</span><span class="bt">Product Design Leader</span></span></a>
+  <ul>
+    <li><a href="work.html" class="on" aria-current="page">Work</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</header>
+<main>
+<div id="cs-bustracker" style="background:var(--bg)">
+
+  
+  <!-- Hero -->
+  <div class="cs-hero">
+    <div class="cs-dot">● Mobile UX · End-to-End Case Study · 2019</div>
+    <h1>Bus Tracker <em>Mobile App</em></h1>
+    <p class="cs-hero-sub">A full-cycle UX research and design project — uncovering the real frustrations of public transit commuters and translating them into a clear, real-time bus tracking mobile experience.</p>
+    <div class="cs-tags">
+      <span class="cs-tag">UX Research</span>
+      <span class="cs-tag">Mobile Design</span>
+      <span class="cs-tag">User Interviews</span>
+      <span class="cs-tag">End-to-End</span>
+      <span class="cs-tag">Sketch · Miro</span>
+    </div>
+  </div>
+
+  <!-- Meta -->
+  <div class="cs-meta">
+    <div class="cs-mi"><div class="cs-ml">Designer</div><div class="cs-mv">Sarah Abouzainah</div></div>
+    <div class="cs-mi"><div class="cs-ml">Type</div><div class="cs-mv">Personal UX Case Study</div></div>
+    <div class="cs-mi"><div class="cs-ml">Tools</div><div class="cs-mv">Sketch · Miro</div></div>
+    <div class="cs-mi"><div class="cs-ml">Year</div><div class="cs-mv">2019 – 2021</div></div>
+    <div class="cs-mi"><div class="cs-ml">Domain</div><div class="cs-mv">Mobile · Public Transit</div></div>
+  </div>
+
+  <div class="cs-cover-wrap"><img class="cs-cover" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/8c28f1112026169.600d008db62e0.png" alt="Bus Tracker Mobile App — project cover"></div>
+
+  <div class="cs-body"><aside class="cs-toc" aria-label="In this case study"><div class="toc-h">In this case study <b class="toc-pct">0%</b></div><div class="toc-bar"><i></i></div><ol><li><a href="#s1"><span>01</span>Problem Space</a></li><li><a href="#s2"><span>02</span>Research</a></li><li><a href="#s3"><span>03</span>Design Process</a></li><li><a href="#s4"><span>04</span>Final Designs</a></li><li><a href="#s5"><span>05</span>Design Decisions</a></li><li><a href="#s6"><span>06</span>Outcomes</a></li><li><a href="#s7"><span>07</span>Learnings</a></li></ol></aside><div class="cs-main">
+
+    <!-- 01 Problem Space -->
+    <div class="cs-sec" id="s1">
+      <div class="cs-sn">01 — Problem Space</div>
+      <h2>Commuting by bus shouldn't feel like a guessing game</h2>
+      <p>Public transit riders face a daily uncertainty problem — they have no reliable way of knowing when their bus will arrive, whether it's running late, or which route to take to minimise wait time. The result is wasted time, missed connections, and a growing preference for private transport even when buses are available.</p>
+      <div class="cs-pain">
+        <div class="cs-pain-item">
+          <h4>🚌 No real-time visibility</h4>
+          <p>Printed timetables and static route maps give no indication of where a bus actually is or when it will arrive at a specific stop.</p>
+        </div>
+        <div class="cs-pain-item">
+          <h4>😤 High uncertainty = high stress</h4>
+          <p>Commuters arrive early and wait, not knowing if the bus is 2 minutes away or 20. The anxiety of not knowing drives people away from public transit entirely.</p>
+        </div>
+        <div class="cs-pain-item">
+          <h4>🗺️ Route complexity for new users</h4>
+          <p>Finding the right bus, the right stop, and the right connection is unintuitive for infrequent users — there's no single tool that brings it all together.</p>
+        </div>
+      </div>
+      <div class="cs-hmw">
+        <p>"How might we design a mobile experience that gives commuters real-time confidence about their bus — so that waiting at a stop feels informed rather than anxious?"</p>
+      </div>
+    </div>
+
+    <!-- Cover 2 -->
+    <div class="cs-sec">
+      <div class="cs-img-single">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/253cb5112026169.600ea305b8735.png" alt="Project overview">
+      </div>
+    </div>
+
+    <!-- 02 Research -->
+    <div class="cs-sec" id="s2">
+      <div class="cs-sn">02 — Research</div>
+      <h2>Listening to real commuters</h2>
+      <p>The research phase combined user interviews with observational study at bus stops to understand commuter behaviour, mental models around transit timing, and the coping strategies people use when information is absent.</p>
+      <div class="cs-stats">
+        <div class="cs-stat"><span class="cs-stat-n">8</span><div class="cs-stat-l">In-depth user interviews</div></div>
+        <div class="cs-stat"><span class="cs-stat-n">3</span><div class="cs-stat-l">User personas defined</div></div>
+        <div class="cs-stat"><span class="cs-stat-n">72%</span><div class="cs-stat-l">Said uncertainty was the #1 pain point</div></div>
+        <div class="cs-stat"><span class="cs-stat-n">4</span><div class="cs-stat-l">Competing apps benchmarked</div></div>
+      </div>
+      <div class="cs-insight">
+        <div class="cs-insight-item"><span class="cs-icon">⏱️</span><h4>Time is the core currency</h4><p>Every interviewee measured the quality of their commute in minutes wasted. An extra 5 minutes of confident waiting was valued over 15 minutes of uncertain waiting.</p></div>
+        <div class="cs-insight-item"><span class="cs-icon">📍</span><h4>Location context over schedules</h4><p>Users didn't want to know when the bus was scheduled to arrive — they wanted to know where it was right now and when it would reach their specific stop.</p></div>
+        <div class="cs-insight-item"><span class="cs-icon">🔄</span><h4>Routine trips need zero friction</h4><p>For daily commuters, the app needs to surface the relevant route instantly — not ask them to search every time. Favourite stops and saved routes are essential.</p></div>
+      </div>
+    </div>
+
+    <!-- Research visuals -->
+    <div class="cs-sec">
+      <div class="cs-flow-lbl">Research artefacts — personas & journey mapping</div>
+      <div class="cs-img-row">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/9a5137112026169.600d008db7c95.png" alt="User personas">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/2e1d87112026169.600d008db7480.png" alt="User journey map">
+      </div>
+      <p class="cs-caption">Three distinct personas emerged: the daily commuter, the occasional rider, and the transit newcomer — each with different frequency, familiarity, and tolerance for complexity.</p>
+      <div class="cs-img-single">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5bc9cc112026169.600d008db6b87.png" alt="Research insights">
+      </div>
+      <p class="cs-caption">Affinity mapping across interview notes surfaced clusters around time uncertainty, stop identification difficulty, and the absence of a trusted single source of truth.</p>
+    </div>
+
+    <!-- 03 Design Process -->
+    <div class="cs-sec" id="s3">
+      <div class="cs-sn">03 — Design Process</div>
+      <h2>From insights to interface</h2>
+      <div class="cs-process">
+        <div class="cs-step"><span class="cs-step-icon">🎙️</span><div class="cs-step-t">Discover</div><div class="cs-step-s">User interviews at bus stops</div></div>
+        <div class="cs-step"><span class="cs-step-icon">🗺️</span><div class="cs-step-t">Define</div><div class="cs-step-s">Personas, journey maps, HMW</div></div>
+        <div class="cs-step"><span class="cs-step-icon">✏️</span><div class="cs-step-t">Ideate</div><div class="cs-step-s">Crazy 8s, IA, low-fi wireframes</div></div>
+        <div class="cs-step"><span class="cs-step-icon">📱</span><div class="cs-step-t">Design</div><div class="cs-step-s">Hi-fi UI in Sketch</div></div>
+        <div class="cs-step"><span class="cs-step-icon">✅</span><div class="cs-step-t">Test</div><div class="cs-step-s">Usability testing, iteration</div></div>
+      </div>
+    </div>
+
+    <!-- Wireframes -->
+    <div class="cs-sec">
+      <div class="cs-flow-lbl">Wireframes & information architecture</div>
+      <div class="cs-img-row">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/fa7be2112026169.600ea305b71cb.png" alt="Wireframes">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b2ea49112026169.600ea305b7b92.png" alt="User flow">
+      </div>
+      <p class="cs-caption">Low-fidelity wireframes mapped the core flows: finding a nearby stop, tracking an active bus, and saving a favourite route. Three taps maximum from launch to live tracking.</p>
+    </div>
+
+    <!-- 04 Designs -->
+    <div class="cs-sec" id="s4">
+      <div class="cs-sn">04 — Final Designs</div>
+      <h2>A calm, confident transit experience</h2>
+      <p>The final UI was built around one principle: every screen should reduce anxiety, not add to it. Real-time position, ETA in minutes, and route status at a glance — without requiring the user to search or scroll.</p>
+
+      <div class="cs-flow-lbl">Home & live tracking — real-time bus position</div>
+      <div class="cs-img-single">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/1f8558112026169.600d12e311c22.png" alt="Home screen and live tracking">
+      </div>
+      <p class="cs-caption">The home screen surfaces the user's saved stops and shows live ETAs without requiring any interaction. One tap reveals the bus position on the map.</p>
+
+      <div class="cs-flow-lbl">Route search & stop detail</div>
+      <div class="cs-img-row">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/b8ba8d112026169.600d12e310083.png" alt="Route search">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/6a25a2112026169.600d12e310edb.png" alt="Stop detail screen">
+      </div>
+      <p class="cs-caption">Route search returns results ranked by ETA at the user's closest stop, not by route number. Stop detail shows all upcoming buses, their live position, and occupancy level.</p>
+
+      <div class="cs-flow-lbl">Notifications & trip planning</div>
+      <div class="cs-img-single">
+        <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_webp/5b0bdf112026169.600d12e31087d.png" alt="Notifications and trip planning">
+      </div>
+      <p class="cs-caption">Users set a "heads up" alert — the app notifies them when the bus is N minutes from their stop, so they can leave at the right moment rather than waiting in the cold.</p>
+    </div>
+
+    <!-- 05 Design Decisions -->
+    <div class="cs-sec" id="s5">
+      <div class="cs-sn">05 — Design Decisions</div>
+      <h2>Key choices</h2>
+      <div class="cs-decision">
+        <div class="cs-before"><div class="cs-dlbl">Assumption</div><h4>Show full route schedules</h4><p>Initial concept displayed all scheduled departures for a stop — which is what existing apps do. Users found it overwhelming and didn't trust the times.</p></div>
+        <div class="cs-after"><div class="cs-dlbl">Decision</div><h4>Lead with live ETA, not timetables</h4><p>We replaced schedule lists with a single prominent ETA counter in minutes. Live data only. Schedules moved to a secondary "more info" layer.</p></div>
+      </div>
+      <div class="cs-decision">
+        <div class="cs-before"><div class="cs-dlbl">Assumption</div><h4>Map-first navigation</h4><p>Early wireframes opened directly on a full-screen map. Usability tests showed this was disorienting — users didn't know what stop to tap or why.</p></div>
+        <div class="cs-after"><div class="cs-dlbl">Decision</div><h4>List-first with map on demand</h4><p>Home screen lists the user's nearby stops with live ETAs. Map is one tap away and opens pre-zoomed to the relevant bus position.</p></div>
+      </div>
+      <div class="cs-decision">
+        <div class="cs-before"><div class="cs-dlbl">Assumption</div><h4>Generic search as the primary entry point</h4><p>Search-heavy onboarding required users to know route numbers or stop names — a barrier for new and infrequent users.</p></div>
+        <div class="cs-after"><div class="cs-dlbl">Decision</div><h4>Location-aware suggestions by default</h4><p>App opens to stops within 500m of the user's current location, ranked by next departure. No search required for the most common use case.</p></div>
+      </div>
+    </div>
+
+    <!-- 06 Outcomes -->
+    <div class="cs-sec" id="s6">
+      <div class="cs-sn">06 — Outcomes</div>
+      <h2>Results from usability testing</h2>
+      <div class="cs-outcomes">
+        <div class="cs-outcome"><span class="cs-outcome-n">3</span><div class="cs-outcome-t">Taps to live tracking</div><div class="cs-outcome-s">From cold launch to bus on map</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">100%</span><div class="cs-outcome-t">Task completion</div><div class="cs-outcome-s">Find nearest stop &amp; ETA — all 8 testers</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">↓62%</span><div class="cs-outcome-t">Time-on-task</div><div class="cs-outcome-s">vs. benchmarked competitor apps</div></div>
+        <div class="cs-outcome"><span class="cs-outcome-n">↑88%</span><div class="cs-outcome-t">Perceived confidence</div><div class="cs-outcome-s">Post-test survey — users felt informed</div></div>
+      </div>
+    </div>
+
+    <!-- 07 Learnings -->
+    <div class="cs-sec" id="s7">
+      <div class="cs-sn">07 — Learnings</div>
+      <h2>What this taught me</h2>
+      <div class="cs-learning"><div class="cs-ln">01</div><div class="cs-lb"><h4>Real-time data changes the UX problem entirely</h4><p>Once you commit to live data, static patterns — lists, timetables, scheduled routes — become the enemy. The design must be built around a moving truth, not a fixed one. That requires rethinking every screen from scratch.</p></div></div>
+      <div class="cs-learning"><div class="cs-ln">02</div><div class="cs-lb"><h4>Anxiety is a UX problem, not just a UI problem</h4><p>The core user need wasn't information — it was emotional: to feel in control of their time. That distinction changed how I thought about hierarchy, motion, and data density across every screen.</p></div></div>
+      <div class="cs-learning"><div class="cs-ln">03</div><div class="cs-lb"><h4>The zero-search experience is worth fighting for</h4><p>The biggest friction in transit apps is the assumption that users want to search. Most users just want to leave home at the right moment. Designing for location awareness first — and search as a fallback — halved task completion time.</p></div></div>
+    </div>
+
+  </div></div>
+  <section class="cs-more"><div class="label">More case studies</div>
+    <div class="mgrid">
+      <a class="mcard" href="gisacc.html" style="--accent:var(--tx)"><div class="cover"><span class="shape" data-shape="burst" data-n="36"></span></div><div><small>04 · Design systems</small><h3>GISACC Design System</h3><p>An enterprise design system built end to end: components, tokens, theming and accessibility.</p><span class="textlink">View project →</span></div></a>
+      <a class="mcard" href="appraisal.html" style="--accent:var(--gold)"><div class="cover"><span class="shape" data-shape="flower" data-n="8" data-style="solid"></span></div><div><small>01 · Enterprise HR</small><h3>Valeo Appraisal Process</h3><p>A role-based digital appraisal system for HR, leaders and managers, replacing paper and email.</p><span class="textlink">View project →</span></div></a>
+    </div>
+    <a class="textlink" href="work.html">&larr; All work</a>
+  </section>
+  <div class="cs-footer">
+    <p>© 2019 · Bus Tracker Mobile App · UX Case Study · Sarah Abouzainah</p>
+    <a href="https://www.behance.net/gallery/112026169/UX-Case-Study-Bus-Tracker-Mobile-App" target="_blank" class="cs-behance">View full project on Behance ↗</a>
+  </div>
+
+</div><!-- end #cs-bustracker -->
+</main>
+<script src="site.js"></script>
+</body>
+</html>
