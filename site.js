@@ -23,6 +23,49 @@
     s+='<circle r="12" '+(solid?'style="fill:var(--bg)"':'fill="none"')+' stroke="currentColor" stroke-width="1.2" stroke-opacity="'+(solid?0:.8)+'"/><circle r="5.5" fill="currentColor"/></svg>';
     return s;
   }
+  function sparkPath(r){var k=r*.2;return 'M0 '+(-r)+' Q'+k+' '+(-k)+' '+r+' 0 Q'+k+' '+k+' 0 '+r+' Q'+(-k)+' '+k+' '+(-r)+' 0 Q'+(-k)+' '+(-k)+' 0 '+(-r)+'Z';}
+  function spark(){
+    return '<svg viewBox="-100 -100 200 200" aria-hidden="true"><path d="'+sparkPath(92)+'" fill="currentColor"/></svg>';
+  }
+  function core(){
+    return '<svg viewBox="-100 -100 200 200" aria-hidden="true">'
+      +'<ellipse rx="94" ry="40" transform="rotate(-28)" fill="none" stroke="currentColor" stroke-opacity=".6" stroke-width="9"/>'
+      +'<circle r="58" fill="currentColor"/><path d="'+sparkPath(38)+'" style="fill:var(--bg)"/>'
+      +'<circle cx="83" cy="-44" r="15" style="fill:var(--red);stroke:var(--bg)" stroke-width="5"/></svg>';
+  }
+  function orbitArt(){
+    var P='M-92 0 a92 34 0 1 0 184 0 a92 34 0 1 0 -184 0',s='<svg viewBox="-100 -100 200 200" aria-hidden="true">',i,cfg=[[0,'var(--red)',14,'r'],[60,'currentColor',18,'c'],[-60,'var(--sage)',22,'r']];
+    s+='<circle r="64" fill="currentColor" opacity=".10"/><circle r="97" fill="none" stroke="var(--sage)" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="0.1 7.2" opacity=".7"/>';
+    for(i=0;i<cfg.length;i++){
+      var c=cfg[i],node=c[3]==='c'?'<circle r="6" fill="'+c[1]+'"/>':'<rect x="-6" y="-6" width="12" height="12" rx="3" fill="'+c[1]+'"/>';
+      s+='<g transform="rotate('+c[0]+')"><ellipse rx="92" ry="34" fill="none" style="stroke:rgba(var(--ink-rgb),.22)" stroke-width="1.3"/><g>'+node+'<animateMotion dur="'+c[2]+'s" begin="-'+(i*5)+'s" repeatCount="indefinite" path="'+P+'"/></g></g>';
+    }
+    s+='<circle r="38" fill="none" stroke="var(--red)" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="0.1 6.6"/><circle r="27" fill="currentColor"/><path d="'+sparkPath(17)+'" style="fill:var(--bg)"/></svg>';
+    return s;
+  }
+  var mqN=0;
+  function toggleIcon(){return '<svg viewBox="-100 -100 200 200" aria-hidden="true"><rect x="-90" y="-46" width="180" height="92" rx="46" fill="currentColor"/><circle cx="44" cy="0" r="32" style="fill:var(--bg)"/></svg>';}
+  function pillIcon(){return '<svg viewBox="-100 -100 200 200" aria-hidden="true"><rect x="-92" y="-44" width="184" height="88" rx="44" fill="currentColor"/><rect x="-44" y="-9" width="88" height="18" rx="9" style="fill:var(--bg)"/></svg>';}
+  function cardMark(){
+    return '<svg viewBox="-100 -100 200 200" aria-hidden="true"><g transform="rotate(-10)"><rect x="-92" y="-62" width="184" height="124" rx="34" style="fill:var(--bg2);stroke:currentColor" stroke-width="9"/>'
+      +'<rect x="-66" y="-24" width="64" height="48" rx="24" fill="currentColor"/><circle cx="-26" cy="0" r="15" style="fill:var(--bg)"/>'
+      +'<path d="'+sparkPath(26)+'" transform="translate(48,0)" style="fill:var(--red)"/></g></svg>';
+  }
+  function stackArt(){
+    var G='var(--gold)',Y='var(--red)',S='var(--sage)',B='var(--bg)',I='rgba(var(--ink-rgb),';
+    function bar(x,y,w,o){return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="5" rx="2.5" style="fill:'+I+o+')"/>';}
+    function card(y,inner,d){return '<g transform="translate(14,'+y+')"><g class="fl" style="animation-delay:'+d+'s"><rect width="172" height="46" rx="11" style="fill:var(--bg2);stroke:'+I+'.2)" stroke-width="1.2"/>'+inner+'</g></g>';}
+    var c1='<rect x="12" y="13" width="30" height="16" rx="8" fill="'+G+'"/><circle cx="34" cy="21" r="6" style="fill:'+B+'"/>'+bar(52,15,44,.28)+bar(52,25,30,.16)+'<rect x="104" y="20" width="44" height="3" rx="1.5" style="fill:'+I+'.2)"/><rect x="104" y="20" width="26" height="3" rx="1.5" fill="'+Y+'"/><circle cx="130" cy="21.5" r="5.5" fill="'+Y+'"/>';
+    var c2='<rect x="12" y="12" width="62" height="20" rx="10" fill="'+G+'"/><rect x="28" y="20" width="30" height="5" rx="2.5" style="fill:'+B+'"/><rect x="84" y="12" width="40" height="20" rx="10" fill="none" stroke="'+S+'" stroke-width="2"/><circle cx="96" cy="22" r="4" fill="'+S+'"/><circle cx="146" cy="22" r="11" fill="'+Y+'"/>';
+    var c3='<path d="'+sparkPath(8)+'" transform="translate(24,23)" fill="'+G+'"/>'+bar(40,15,58,.4)+bar(40,25,36,.2)+'<rect x="102" y="12" width="3" height="22" rx="1.5" fill="'+Y+'"><animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite"/></rect><circle cx="146" cy="23" r="12" fill="'+G+'"/><path d="M141 23 H151 M147 18 L152 23 L147 28" fill="none" style="stroke:'+B+'" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>';
+    return '<svg viewBox="0 0 200 200" aria-hidden="true"><g transform="rotate(-8 100 100)">'+card(22,c1,0)+card(80,c2,-1.6)+card(138,c3,-3.2)
+      +'<path d="'+sparkPath(14)+'" transform="translate(176,16)" fill="'+Y+'"/><path d="'+sparkPath(7)+'" transform="translate(10,128)" fill="'+S+'"/></g></svg>';
+  }
+  function pickFlower(el){
+    if(el.closest&&el.closest('.brand')) return cardMark();
+    if(el.classList.contains('art')||el.classList.contains('page-art')||(el.closest&&el.closest('.cover'))) return stackArt();
+    var k=(mqN++)%3; return k===0?toggleIcon():k===1?pillIcon():spark();
+  }
   function burst(n){
     var s='<svg viewBox="-100 -100 200 200" aria-hidden="true">',i;
     n=n||36;
@@ -57,7 +100,7 @@
   }
   function build(el){
     var t=el.getAttribute('data-shape'),n=+(el.getAttribute('data-n')||8),st=el.getAttribute('data-style')||'solid',ring=el.hasAttribute('data-ring');
-    el.innerHTML = t==='flower'?flower(n,st,ring):t==='burst'?burst(n):t==='rings'?rings():t==='waves'?waves():t==='dots'?dotgrid():'';
+    el.innerHTML = t==='flower'?pickFlower(el):t==='burst'?burst(n):t==='rings'?rings():t==='waves'?waves():t==='dots'?dotgrid():'';
     el.setAttribute('aria-hidden','true');
   }
   [].forEach.call(document.querySelectorAll('[data-shape]'),build);
@@ -72,7 +115,7 @@
   applyTheme(root.getAttribute('data-theme')==='light'?'light':'dark');
   if(tb) tb.addEventListener('click',function(){
     var t=root.getAttribute('data-theme')==='light'?'dark':'light';
-    applyTheme(t); try{localStorage.setItem('theme',t);}catch(e){}
+    applyTheme(t); try{localStorage.setItem('theme-v2',t);}catch(e){}
   });
 
   /* ---------- nav state ---------- */
